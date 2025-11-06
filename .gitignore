@@ -39,3 +39,6 @@ wheels/
 *.fls
 *.bbl
 *.blg
+
+# Entorno virtual
+jjenv/
