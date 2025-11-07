@@ -30,6 +30,9 @@ proyectofinalia/
 │
 ├── models/
 │   └── random_forest_model.pkl     # Modelo Random Forest entrenado
+├── ui/
+│   └── __init__.py                 # Inicializa la app del bot
+│   └── app_chatbot.py              #Interfaz de usuario de chatbot
 │
 └── requeriments.txt                # Librerías necesarias para ejecutar el proyecto
 │
