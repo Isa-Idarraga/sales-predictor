@@ -5,3 +5,4 @@ xgboost>=1.7
 joblib>=1.2
 matplotlib>=3.6
 seaborn>=0.12
+PyQt5>=5.15
