@@ -35,9 +35,9 @@ try:
     # Crear mapeo automático ciudad → departamento
     mapeo_ciudad_depto = df.groupby('ciudad')['departamento'].first().to_dict()
     
-    print(f"📊 Dataset cargado: {len(df)} propiedades de {len(ciudades_validas)} ciudades\n")
+    print(f" Dataset cargado: {len(df)} propiedades de {len(ciudades_validas)} ciudades\n")
 except FileNotFoundError:
-    print("⚠️  No se pudo cargar el dataset, usando valores por defecto")
+    print("  No se pudo cargar el dataset, usando valores por defecto")
     ciudades_validas = ['Bogotá D.C', 'Medellín', 'Cali', 'Barranquilla', 'Cartagena']
     departamentos_validos = ['Cundinamarca', 'Antioquia', 'Valle del Cauca', 'Atlántico', 'Bolívar']
     tipos_propiedad_validos = ['Apartamento', 'Casa', 'Lote', 'Finca']
@@ -119,14 +119,14 @@ habitaciones = int(pedir_numero("- Número de habitaciones", minimo=0, maximo=20
 banos = int(pedir_numero(" - Número de baños", minimo=0, maximo=10))
 
 print("\n" + "─"*80)
-print("📍 UBICACIÓN")
+print(" UBICACIÓN")
 print("─"*80)
 
 ciudad = pedir_opcion("🔹 Ciudad:", ciudades_validas)
 
 # Mapear automáticamente el departamento según la ciudad
 departamento = mapeo_ciudad_depto.get(ciudad, 'Desconocido')
-print(f"   ℹ️  Departamento detectado automáticamente: {departamento}")
+print(f"   ℹ  Departamento detectado automáticamente: {departamento}")
 
 # Coordenadas aproximadas (opcional)
 usar_coords = input("\n¿Conoces las coordenadas geográficas? (s/n): ").lower() == 's'
@@ -141,7 +141,7 @@ else:
         longitud = coords_ciudad['longitud'] if not pd.isna(coords_ciudad['longitud']) else -74.0
     else:
         latitud, longitud = 4.6, -74.0  # Bogotá por defecto
-    print(f"   ℹ  Usando coordenadas aproximadas de {ciudad}: ({latitud:.2f}, {longitud:.2f})")
+    print(f"    Usando coordenadas aproximadas de {ciudad}: ({latitud:.2f}, {longitud:.2f})")
 
 print("\n" + "─"*80)
 print(" TIPO DE PROPIEDAD")
@@ -279,8 +279,8 @@ print()
 print(f"   💵 PRECIO ESTIMADO: ${prediccion:,.0f} COP")
 print(f"   💵 Precio por m²: ${prediccion/area:,.0f} COP/m²")
 print()
-print(f"   ℹ  Precisión del modelo: MAPE = 0.80% (error promedio de $11M COP)")
-print(f"   ℹ  Confiabilidad: R² = 0.9899 (98.99% de varianza explicada)")
+print(f"    Precisión del modelo: MAPE = 0.80% (error promedio de $11M COP)")
+print(f"    Confiabilidad: R² = 0.9899 (98.99% de varianza explicada)")
 print()
 print("="*80)
 
