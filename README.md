@@ -22,7 +22,7 @@ Sistema de predicción de precios inmobiliarios usando Machine Learning (Random 
 proyectofinalia/
 │
 ├── data/
-│   ├── co_properties.csv           # Dataset original (1M registros)
+│   ├── properties.csv              # Dataset original (1M registros)
 │   └── dataset_limpio.csv          # Dataset limpio (28,755 registros)
 │
 ├── notebooks/
@@ -31,13 +31,8 @@ proyectofinalia/
 ├── models/
 │   └── random_forest_model.pkl     # Modelo Random Forest entrenado
 │
-├── figures/
-│   ├── comparacion_modelos.png     # Gráfico MAPE y R² de 3 modelos
-│   ├── predicciones_vs_reales.png  # Scatter plot predicciones vs reales
-│   └── importancia_caracteristicas.png  # Top 15 features importantes
+└── requeriments.txt                # Librerías necesarias para ejecutar el proyecto
 │
-├── INFORME_SECCIONES.txt           # Secciones del informe (Métodos, Resultados, etc.)
-├── PRESENTACION_GUION.txt          # Guion para exposición de 10 minutos
 └── README.md                       # Este archivo
 ```
 
@@ -54,7 +49,7 @@ Python 3.8+
 ### 2. Instalar dependencias
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn xgboost joblib
+pip install -r requeriments.txt
 ```
 
 ### 3. Ejecutar el notebook
@@ -159,23 +154,6 @@ print(f"Precio estimado: ${precio_predicho[0]:,.0f} COP")
 
 ---
 
-## 📝 Archivos de Documentación
-
-### Para el Informe Escrito:
-📄 `INFORME_SECCIONES.txt`
-- Sección III: Métodos (preprocesamiento, modelos, validación)
-- Sección IV: Resultados (tablas, figuras, métricas)
-- Sección V: Discusión (comparación con literatura, limitaciones)
-- Sección VI: Conclusiones (logros, trabajo futuro)
-
-### Para la Presentación:
-🎤 `PRESENTACION_GUION.txt`
-- Estructura de 12 slides para 10 minutos
-- Guion completo con tiempos
-- Respuestas a preguntas probables
-
----
-
 ## 🎯 Objetivos SMART Cumplidos
 
 - [x] **OE1:** Dataset con >5,000 registros → ✓ 28,755 (5.75×)
@@ -208,11 +186,12 @@ print(f"Precio estimado: ${precio_predicho[0]:,.0f} COP")
 ## 👥 Autores
 
 **Grupo 5**
-- [Tu nombre]
-- [Nombre compañero/a]
+- Isabella Idarraga Botero
+- Juan José Rodríguez Restrepo
+- Diego Andres Gonzalez Graciano
 
-**Curso:** Inteligencia Artificial  
-**Universidad:** [Tu universidad]  
+**Curso:** Introducción a Inteligencia Artificial  
+**Universidad:** Universidad EAFIT
 **Fecha:** Noviembre 2025
 
 ---
@@ -220,8 +199,9 @@ print(f"Precio estimado: ${precio_predicho[0]:,.0f} COP")
 ## 📧 Contacto
 
 Para preguntas o colaboraciones:
-- Email: [tu_email@ejemplo.com]
-- GitHub: [tu_usuario]
+- iidarrabab@eafit.edu.co
+- jjrodrigur@eafit.edu.co
+- dagonzal11@eafit.edu.co
 
 ---
 
@@ -235,7 +215,7 @@ Este proyecto es de código abierto bajo licencia MIT. El dataset proviene de Ka
 
 - Kaggle por proporcionar el dataset
 - Comunidad de scikit-learn y XGBoost
-- Profesores del curso de IA
+- Profesor Juan Camilo Londoño Lopera, profesor del curso
 
 ---
 
